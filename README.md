@@ -1,4 +1,4 @@
-# **Sarafan** ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=0.05&leftFill=%23FF0000 "progress") 
+# **Sarafan** ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=0.1&leftFill=%23FF0000 "progress") 
 ### _Демо проект_ 
 
 Делаю по видео урокам letsCode [Spring Boot Rest + Vue.js](https://www.youtube.com/playlist?list=PLU2ftbIeotGqSTOVNjT4L3Yfy8jatCdhm).
@@ -6,6 +6,8 @@
 **Возможности:**
 
 ✔ Отправка, редактирование, чтение и удаление сообщений.
+
+✔ Vue.js - базовый JavaScript интерфейс
 
 **Дока**
 
@@ -42,7 +44,7 @@ Maven, Spring, Postman.
 
 - [X] **lec_1** - Делаем простое REST приложение с нуля.
 
-- [ ] **lec_2** - Vue.js - базовый JavaScript интерфейс (часть 1). 
+- [X] **lec_2** - Vue.js - базовый JavaScript интерфейс (часть 1). 
 
 - [ ] **lec_3** - Vue.js - отображение и изменение данных с сервера (часть 2). 
 
