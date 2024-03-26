@@ -1,4 +1,4 @@
-# **Sarafan** ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=18&leftFill=%23FF0000 "progress") 
+# **Sarafan** ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=23&leftFill=%23FF0000 "progress") 
 ### _Демо проект_ 
 
 Делаю по видео урокам letsCode [Spring Boot Rest + Vue.js](https://www.youtube.com/playlist?list=PLU2ftbIeotGqSTOVNjT4L3Yfy8jatCdhm).
@@ -13,7 +13,15 @@
 
 ✔ Ограничение видимости некоторых полей в JSON при помощи @JsonView
 
+✔ Аунтификация OAuth2 при помощи Spring Security (так как видео курс старый, то делала по гайдам из docs.spring.io)
+
 **Дока**
+
+```java
+Главная страница
+        
+http://localhost:8080
+```
 
 ```java
 Message:
@@ -23,6 +31,24 @@ Message:
 "text":"message"
 }
 ```
+
+```java
+User:
+
+{
+"id":"id",
+"name":"name",
+"userpic":"userpic",
+"email":"email",
+"lastVisit":"lastVisit",
+"provider":"provider"
+}
+```
+
+**`Аунтификация`**
+>**/login** - вход пользователя
+> 
+>**/logout** - выход пользователя
 
 **`POST`**
 >**/message** - добавление нового сообщения
@@ -54,7 +80,7 @@ Maven, Spring, Postman, PostgresSQL.
 
 - [X] **lec_4** - Подключаем базу данных, настраиваем Jackson.
 
-- [ ] **lec_5** - Подключаем Spring Security и oAuth2. 
+- [X] **lec_5** - Подключаем Spring Security и oAuth2. 
 
 - [ ] **lec_6** - Настраиваем Spring Security и oAuth2 в Vue.js.
 
@@ -90,4 +116,24 @@ Maven, Spring, Postman, PostgresSQL.
 
 - [ ] **lec_22** - Публикация на Heroku.
       
+</details>
+
+**<details><summary>Ссылки которые помогли при настройке OAuth2</summary>**
+
+- Статья **Spring Boot OAuth2 Login with Google Example** от *30 November 2022* - https://www.codejava.net/frameworks/spring-boot/oauth2-login-with-google-example
+
+- Гайды от **Spring.io**
+  - https://docs.spring.io/spring-authorization-server/reference/guides/how-to-social-login.html
+  - https://docs.spring.io/spring-authorization-server/reference/protocol-endpoints.html
+  - https://docs.spring.io/spring-security/reference/servlet/authentication/passwords/basic.html
+  - https://docs.spring.io/spring-security/reference/servlet/architecture.html#servlet-securityfilterchain
+
+
+- Статьи на **Habr**
+  - https://habr.com/ru/articles/346628/
+  - https://habr.com/ru/articles/528410/
+  
+
+- **JavaRush** - https://javarush.com/quests/lectures/questspringsecurity.level01.lecture09
+
 </details>

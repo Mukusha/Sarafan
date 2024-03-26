@@ -1,0 +1,37 @@
+spring:
+# SQL
+  datasource:
+    url: jdbc:postgresql://localhost/sarafan
+    username: ${postgresql_username}
+    password: ${postgresql_password}
+
+  jpa:
+    generate-ddl: true
+  # show-sql: true
+    properties:
+      hibernate:
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+# OAuth2
+  security:
+    oauth2:
+      resource:
+        preferTokenInfo: true
+      #  accessTokenUri: https://www.googleapis.com/oauth2/v4/token
+      #  userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+      #  userInfoUri: https://www.googleapis.com/oauth2/v3/userinfo
+      client:
+        registration:
+          google:
+            client-id: ${google_clientId}
+            client-secret: ${google_clientSecret}
+            clientAuthenticationScheme: form
+            #redirectUri: http://localhost:8080/oauth2/authorization/google
+            scope:
+              - openid
+              - email
+              - profile
+
+
