@@ -34,4 +34,8 @@ spring:
               - email
               - profile
 
-
+  session:
+    jdbc:
+      initialize-schema: always
+      table-name: SPRING_SESSION
+      schema=classpath: session_tables.sql
