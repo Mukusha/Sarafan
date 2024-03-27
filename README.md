@@ -1,4 +1,4 @@
-# **Sarafan** ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=23&leftFill=%23FF0000 "progress") 
+# **Sarafan** ![progress](http://www.yarntomato.com/percentbarmaker/button.php?barPosition=27&leftFill=%23FF0000 "progress") 
 ### _Демо проект_ 
 
 Делаю по видео урокам letsCode [Spring Boot Rest + Vue.js](https://www.youtube.com/playlist?list=PLU2ftbIeotGqSTOVNjT4L3Yfy8jatCdhm).
@@ -82,7 +82,7 @@ Maven, Spring, Postman, PostgresSQL.
 
 - [X] **lec_5** - Подключаем Spring Security и oAuth2. 
 
-- [ ] **lec_6** - Настраиваем Spring Security и oAuth2 в Vue.js.
+- [X] **lec_6** - Настраиваем Spring Security и oAuth2 в Vue.js.
 
 - [ ] **lec_7** - Настраиваем Webpack и разбиваем фронт на
 

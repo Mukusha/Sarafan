@@ -1,9 +1,11 @@
+
 function getIndex(list, id) {
     for (var i = 0; i < list.length; i++ ) {
         if (list[i].id === id) {
             return i;
         }
     }
+
     return -1;
 }
 
@@ -30,7 +32,7 @@ Vue.component('message-form', {
             '<input type="button" value="Save" @click="save" />' +
         '</div>',
     methods: {
-        save: function() { //кнопка сохранить
+        save: function() {
             var message = { text: this.text };
 
             if (this.id) {
@@ -90,14 +92,6 @@ Vue.component('messages-list', {
         '<message-row v-for="message in messages" :key="message.id" :message="message" ' +
             ':editMethod="editMethod" :messages="messages" />' +
     '</div>',
-    //Здесь получили все записи с сервера и сохранили в массиве messages
-  created: function() {
-    messageApi.get().then(result =>
-        result.json().then(data =>
-            data.forEach(message => this.messages.push(message))
-        )
-    )
-  },
   methods: {
     editMethod: function(message) {
         this.message = message;
@@ -107,8 +101,23 @@ Vue.component('messages-list', {
 
 var app = new Vue({
   el: '#app',
-  template: '<messages-list :messages="messages" />',
+  template:
+    '<div>' +
+        '<div v-if="!profile.attributes">Необходимо авторизоваться через <a href="/oauth2/authorization/google">Google</a></div>' +
+        '<div v-else>' +
+            '<div>{{profile.attributes.name}}&nbsp;<a href="/logout">Выйти</a></div>' +
+            '<messages-list :messages="messages" />' +
+        '</div>' +
+    '</div>',
   data: {
-    messages: []
-  }
+    messages: frontendData.messages,
+    profile: frontendData.profile
+  },
+  created: function() {
+//    messageApi.get().then(result =>
+//        result.json().then(data =>
+//            data.forEach(message => this.messages.push(message))
+//        )
+//    )
+  },
 });

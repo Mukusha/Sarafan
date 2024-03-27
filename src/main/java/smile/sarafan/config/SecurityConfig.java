@@ -28,14 +28,14 @@ public class SecurityConfig {
         http.csrf(AbstractHttpConfigurer::disable)
                 //все страницы требуют авторизации кроме страницы входа
                 .authorizeHttpRequests((auth) -> auth
-                        .requestMatchers("/login").permitAll()
+                        .requestMatchers("/", "/login**", "/js/**", "/error**").permitAll()
                         .anyRequest().authenticated())
                 //что бы по логину паролю можно было зайти
-                .formLogin(Customizer.withDefaults())
+                //    .formLogin(Customizer.withDefaults())
                 //перенаправление если запрашивают страницу без авторизации
                 .exceptionHandling((exceptions) -> exceptions
                         .defaultAuthenticationEntryPointFor(
-                                new LoginUrlAuthenticationEntryPoint("/login"),
+                                new LoginUrlAuthenticationEntryPoint("/"),
                                 new MediaTypeRequestMatcher(MediaType.TEXT_HTML)
                         )
                 )
