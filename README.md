@@ -65,10 +65,15 @@ User:
 **`DELETE`**
 >**/message/{id}** - удалить сообщение с указанным id
   
+
 **Стек технологий**
 
 Maven, Spring, Postman, PostgresSQL.
 
+**Скриншоты приложения**
+
+Главная страница для авторизованного и не авторизованного пользователя:
+<p align="center" > <img  src="./assets_README/No_auth_user.PNG" width="30%">  <img  src="./assets_README/Auth_user.PNG" width="30%"> </p>
 
 **<details><summary>Состав видео курса</summary>**
 
